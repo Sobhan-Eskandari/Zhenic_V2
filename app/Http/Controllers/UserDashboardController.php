@@ -8,9 +8,9 @@ use App\Http\Controllers\Controller;
 class UserDashboardController extends Controller
 {
     public function user(){
-        dd('hi user');
+        dd('hello from user');
     }
     public function seller(){
-        dd('hi seller');
+        dd('hello from seller');
     }
 }
