@@ -9,10 +9,6 @@
     <script src="../js/bootstrap-select.min.js"></script>
 @endsection
 
-{{--@section('pms')--}}
-    {{--../css/pms.css--}}
-{{--@endsection--}}
-
 @section('css')
     ../css/makeAnnouncement.css
 @endsection
