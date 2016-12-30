@@ -287,6 +287,9 @@ Route::get('/json-market/{id?}', function($id = null) {
         }
         $markets['photos_address'] = $photos;
     }
+    foreach ($markets as $market){
+        $market['text'] = strip_tags($market['text']);
+    }
     $response =  Response::json(array(
         'error' => false,
         'markets' => $markets,
