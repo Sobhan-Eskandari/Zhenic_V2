@@ -285,6 +285,7 @@ class StoresController extends Controller
             'همدان'=>'همدان',
             'یزد'=>'یزد'
         ];
+
         $market_type = Mategorty::pluck('name', 'name')->all();
         $specialMarkets = Market::whereMarket_type(1)->limit(4)->get();
         $siteInfo = SiteInfo::findOrFail(1);
