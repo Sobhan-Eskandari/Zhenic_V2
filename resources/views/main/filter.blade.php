@@ -167,7 +167,6 @@
     <div class="container-fluid">
         <div class="row allShp_boxing top_border">
             <br><br>
-
             @foreach($markets as $market)
                 <div class="col-md-3 col-xs-6 thumbnail padding">
                     <div class="opac_layer">
@@ -197,7 +196,9 @@
                     </div>
                 </div>
             @endforeach
-
+            @if($markets->isEmpty())
+                <div align="middle"><h3>نتیجه‌ای یافت نشد</h3></div>
+            @endif
         </div>
         <br>
     </div>
@@ -265,7 +266,6 @@
                         </div>
                     </div>
                 @endforeach
-
             </div>
         </div>
 

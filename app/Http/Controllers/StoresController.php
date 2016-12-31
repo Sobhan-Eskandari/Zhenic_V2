@@ -194,6 +194,11 @@ class StoresController extends Controller
             $input['city'] = '';
         }
 
+        if ($input['state'] == "0"){
+            $input['state'] = '';
+            $input['city'] = '';
+        }
+
         isset($input['special']) ? $input['special'] = "1" : $input['special'] = "0";
 
         if($input['percentage'] == 0){
@@ -280,7 +285,6 @@ class StoresController extends Controller
             'همدان'=>'همدان',
             'یزد'=>'یزد'
         ];
-
         $market_type = Mategorty::pluck('name', 'name')->all();
         $specialMarkets = Market::whereMarket_type(1)->limit(4)->get();
         $siteInfo = SiteInfo::findOrFail(1);
