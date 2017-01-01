@@ -317,9 +317,11 @@
                         <label>تگ های جدید(تگ ها را با علامت "," جدا کنید)</label>
                     </div>
                     <div class="row">
-                        {!! Form::text('newTags',null,['class'=>'form-control inpuColXs4 cede_post','id'=>'inpuColXs4','tabindex'=>'17']) !!}
+                        {!! Form::text('newTags',null,['class'=>'form-control inpuColXs4','id'=>'inpuColXs4','tabindex'=>'17']) !!}
 
                     </div>
+
+                    <br>
                     <div class="row">
                         <label>تگ ها</label>
                     </div>
@@ -338,14 +340,14 @@
                 <div class="col-md-4 col-md-offset-0 col-xs-12">
                     <div class="form-group">
                         <label>تاریخ پایان تخفیف ویژه</label>
-                        {!! Form::text('special_percentage_end',null , array('id' => 'datepicker5','readonly'=>'true','class'=>'form-control inputSpecial',"tabindex"=>"23")) !!}
+                        {!! Form::text('special_percentage_end',null , array('id' => 'datepicker5','readonly'=>'true','class'=>'form-control inputSpecial_form',"tabindex"=>"23")) !!}
                     </div>
                 </div>
 
                 <div class="col-md-4 col-md-offset-0 col-xs-12">
                     <div class="form-group">
                         <label>تاریخ شروع تخفیف ویژه</label>
-                        {!! Form::text('special_percentage_start',null , array('id' => 'datepicker4','readonly'=>'true','class'=>'form-control inputSpecial',"tabindex"=>"22")) !!}
+                        {!! Form::text('special_percentage_start',null , array('id' => 'datepicker4','readonly'=>'true','class'=>'form-control inputSpecial_form',"tabindex"=>"22")) !!}
                     </div>
                 </div>
 
@@ -365,14 +367,14 @@
                 <div class="col-md-4 col-md-offset-0 col-xs-12">
                     <div class="form-group">
                         <label>تاریخ پایان قرار داد</label>
-                        {!! Form::text('contract_end', null , array('id' => 'datepicker3','readonly'=>'true','class'=>'form-control inputSpecial',"tabindex"=>"25")) !!}
+                        {!! Form::text('contract_end', null , array('id' => 'datepicker3','readonly'=>'true','class'=>'form-control inputSpecial_form',"tabindex"=>"25")) !!}
                     </div>
                 </div>
 
                 <div class="col-md-4 col-md-offset-0 col-xs-12">
                     <div class="form-group">
                         <label>تاریخ شروع قرارداد</label>
-                        {!! Form::text('contract_start',null , array('id' => 'datepicker2','readonly'=>'true','class'=>'form-control inputSpecial',"tabindex"=>"24")) !!}
+                        {!! Form::text('contract_start',null , array('id' => 'datepicker2','readonly'=>'true','class'=>'form-control inputSpecial_form',"tabindex"=>"24")) !!}
                     </div>
                 </div>
             </div>
@@ -432,24 +434,25 @@
             <hr class="seprate_section_hr">
 
             <div class="row  shop_info_row">
-                <div class="col-md-4 col-md-offset-0 col-xs-12">
-                    <div class="form-group">
-                        <label>امتیاز خرید</label>
-                        {!! Form::text('point',null, array('id' => 'inputSpecial','class'=>'form-control inputSpecial first_one',"tabindex"=>"32")) !!}
-                    </div>
-                </div>
 
                 <div class="col-md-4 col-md-offset-0 col-xs-12" onscroll="myFunction()">
                     <div class="form-group">
                         {!! Form::label('تاریخ پایان', null, ['class' => 'control-label']) !!}
-                        {!! Form::text('end',null, array('id' => 'datepicker','readonly'=>'true','class'=>'form-control inputSpecial',"tabindex"=>"31")) !!}
+                        {!! Form::text('end',null, array('id' => 'datepicker','readonly'=>'true','class'=>'form-control inputSpecial_form',"tabindex"=>"31")) !!}
                     </div>
                 </div>
 
                 <div class="col-md-4 col-md-offset-0 col-xs-12">
                     <div class="form-group">
                         {!! Form::label('تاریخ شروع', null, ['class' => 'control-label']) !!}
-                        {!! Form::text('start',null, array('id' => 'datepicker1','readonly'=>'true','class'=>'form-control inputSpecial',"tabindex"=>"30")) !!}
+                        {!! Form::text('start',null, array('id' => 'datepicker1','readonly'=>'true','class'=>'form-control inputSpecial_form',"tabindex"=>"30")) !!}
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-md-offset-0 col-xs-12">
+                    <div class="form-group">
+                        <label>امتیاز خرید</label>
+                        {!! Form::text('point',null, array('id' => 'inputSpecial','class'=>'form-control inputSpecial first_one',"tabindex"=>"32")) !!}
                     </div>
                 </div>
 

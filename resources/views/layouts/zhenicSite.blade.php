@@ -118,7 +118,7 @@
         <div class="col-xs-12 col-md-4 col-lg-4 footer_part_one">
 
             <div class="row">
-                <h2 class="get_zhenic_app">دریافت اپلیکیشن موبایل ژنیک</h2>
+                <h3 class="get_zhenic_app">دریافت اپلیکیشن موبایل ژنیک</h3>
             </div>
 
             <div class="row">
@@ -133,7 +133,7 @@
             </div>
 
             <div class="row">
-                <h3 class="contact_sub">با ما در شبکه های اجتماعی همراه باشید</h3>
+                <h4 class="contact_sub">با ما در شبکه های اجتماعی همراه باشید</h4>
             </div>
 
             <div class="row s_box">
@@ -161,20 +161,20 @@
         <div class="col-xs-12 col-md-4 col-lg-4 footer_part_two">
 
             <row>
-                <h1 class="connect_way">با ما در تماس باشید</h1>
+                <h2 class="connect_way">با ما در تماس باشید</h2>
                 <hr class="hr_under">
             </row>
 
             <row>
-                <h3 class="exact_address"><i class="fa fa-map-marker nav_map" aria-hidden="true"></i>&nbsp;آدرس:{{ \App\SiteInfo::findOrFail(1)->address }}</h3>
+                <h5 class="exact_address"><i class="fa fa-map-marker nav_map" aria-hidden="true"></i>&nbsp;آدرس:{{ \App\SiteInfo::findOrFail(1)->address }}</h5>
             </row>
 
             <row>
-                <h3 class="exact_address"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;تلفن:{{ \App\SiteInfo::findOrFail(1)->contact_tel }}</h3>
+                <h5 class="exact_address"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;تلفن:{{ \App\SiteInfo::findOrFail(1)->contact_tel }}</h5>
             </row>
 
             <row>
-                <h3 class="exact_address extra_pad"><i class="fa fa-mobile nav_map" aria-hidden="true"></i>&nbsp;موبایل:09301789263</h3>
+                <h5 class="exact_address extra_pad"><i class="fa fa-mobile nav_map" aria-hidden="true"></i>&nbsp;موبایل:09301789263</h5>
             </row>
         </div>
 
@@ -184,23 +184,19 @@
             <div class="row">
                 <div class="col-xs-6">
                     <row>
-
                         <ul class="list-group">
                             <li class="list-group-item"><h4 class="menu_footer menu_title_footer_right">منو ها</h4></li>
-                            <li class="list-group-item"><a href="{{ route('homePage') }}"><h4 class="menu_footer">خانه</h4></a></li>
-                            <li class="list-group-item"><a href="{{ route('stores.index') }}"><h4 class="menu_footer">فروشگاه ها</h4></a></li>
-                            <li class="list-group-item"><a href="{{ route('aboutUs') }}"><h4 class="menu_footer">درباره ما</h4></a></li>
-                            <li class="list-group-item"><a href="{{ route('contactUs') }}"><h4 class="menu_footer">تماس با ما</h4></a></li>
-                            <li class="list-group-item"><a href="{{ route('login') }}"><h4 class="menu_footer">ورود</h4></a></li>
-
+                            <li class="list-group-item"><a href="{{ route('homePage') }}"><h5 class="menu_footer">خانه</h5></a></li>
+                            <li class="list-group-item"><a href="{{ route('stores.index') }}"><h5 class="menu_footer">فروشگاه ها</h5></a></li>
+                            <li class="list-group-item"><a href="{{ route('aboutUs') }}"><h5 class="menu_footer">درباره ما</h5></a></li>
+                            <li class="list-group-item"><a href="{{ route('contactUs') }}"><h5 class="menu_footer">تماس با ما</h5></a></li>
+                            <li class="list-group-item"><a href="{{ route('login') }}"><h5 class="menu_footer">ورود</h5></a></li>
                         </ul>
                     </row>
                 </div>
                 <div class="col-xs-6">
                     <img src="../images/horoof-negar-sefid.png" class="footer_img pull-left">
                 </div>
-
-
             </div>
         </div>
     </div>

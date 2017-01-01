@@ -169,7 +169,7 @@
             <br><br>
 
             @foreach($markets as $market)
-            <div class="col-md-3 col-xs-6 thumbnail padding">
+            <div class="col-md-3 col-xs-6 pull-right thumbnail padding">
                 <div class="opac_layer">
                     @if(count($market->photos) >= 1)
                         <img src="marketsPhotos/{{ $market->photos[0]['address'] }}" class="img-fluid radious_img" alt="Responsive image">
@@ -237,7 +237,7 @@
             <div class="row ">
 
                 @foreach($specialMarkets as $market)
-                <div class="col-md-3 col-xs-6 thumbnail padding">
+                <div class="col-md-3 col-xs-6 pull-right thumbnail padding">
                     <div class="opac_layer">
                         @if(count($market->photos) >= 1)
                             <img src="marketsPhotos/{{ $market->photos[0]['address'] }}" class="img-fluid radious_img" alt="Responsive image">
