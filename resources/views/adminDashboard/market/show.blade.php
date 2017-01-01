@@ -145,7 +145,7 @@
                 </div>
             </div>
 
-            <br>
+            {{--<br>--}}
             <br>
 
             <div class="row">
@@ -234,7 +234,7 @@
                 </div>
             </div>
 
-            <br>
+            {{--<br>--}}
             <br>
 
             <div class="row">
@@ -445,7 +445,7 @@
 
             <hr class="seprate_section_hr">
 
-            <br>
+            {{--<br>--}}
 
             <div class="row">
                 <div class="col-xs-12">
@@ -484,7 +484,7 @@
 
 
             <!------------record button------------>
-            <br>
+            {{--<br>--}}
             <br>
             {{--<div class="row">--}}
                 {{--<div class="col-xs-12 padding_record_btn">--}}

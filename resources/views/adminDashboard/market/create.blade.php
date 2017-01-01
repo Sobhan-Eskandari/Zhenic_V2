@@ -155,7 +155,7 @@
             </div>
 
             <br>
-            <br>
+
 
             <div class="row">
                 <div class="col-xs-12">
@@ -218,7 +218,7 @@
                 </div>
             </div>
 
-            <br>
+            {{--<br>--}}
 
             <div class="row">
                 <div class="col-md-3 col-md-offset-0 col-xs-5">
@@ -233,7 +233,7 @@
                     <input class="form-control upload_long_btn" type="text" id="store_img2" readonly>
                 </div>
             </div>
-            <br>
+            {{--<br>--}}
 
             <div class="row">
                 <div class="col-md-3 col-md-offset-0 col-xs-5">
@@ -250,7 +250,7 @@
             </div>
 
             <br>
-            <br>
+            {{--<br>--}}
 
             <div class="row">
                 <div class="col-xs-12">
@@ -457,7 +457,7 @@
 
             <hr class="seprate_section_hr">
 
-            <br>
+            {{--<br>--}}
 
             <div class="row">
                 <div class="col-xs-12">
@@ -480,7 +480,7 @@
 
 
             <!------------record button------------>
-            <br>
+            {{--<br>--}}
             <br>
             <div class="row">
                 <div class="col-xs-12 padding_record_btn">
