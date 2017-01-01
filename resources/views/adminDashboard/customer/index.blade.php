@@ -94,7 +94,7 @@
             <h4 class="list_title">مشتریان</h4>
         </div>
     </div>
-    <br>
+    {{--<br>--}}
     <div class="row">
         <div class="col-xs-12 table_padding">
             <table class="table table-bordered">

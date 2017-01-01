@@ -11,19 +11,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="../../js/bootstrap-select.min.js"></script>
     <script src="../../js/state-city.js"></script>
+
+    <style>
+        .form-group{
+            /*removing verical space*/
+            margin-bottom : 5px !important;
+        }
+    </style>
 @endsection
 
 {{--@section('pms')--}}
     {{--../css/pms.css--}}
 {{--@endsection--}}
 
+@section('bootstrap_select')
+    ../css/bootstrap-select.css
+@endsection
+
 @section('css')
     ../css/makeUser.css
 @endsection
 
-@section('bootstrap_select')
-    ../css/bootstrap-select.css
-@endsection
 
 @section('sidebar')
     ../css/sidebar.css
@@ -72,7 +80,7 @@
                 </div>
             </div>
 
-            <br>
+            {{--<br>--}}
 
             <!------second row button & input------->
 
@@ -136,7 +144,7 @@
 
             </div>
 
-            <br>
+            {{--<br>--}}
             <div class="row shop_info_row">
                 <div class="col-xs-6">&nbsp;</div>
                 <div class="col-md-6 col-md-offset-0 col-xs-12 input_box_shop pull-left address_box">
@@ -174,7 +182,7 @@
                     </div>
                 </div>
             </div>
-            <br>
+            {{--<br> --}}
 
             <div class="row user_info_row">
                 <div class="col-md-4 col-md-offset-0 col-xs-12 input_box_user">
@@ -194,7 +202,7 @@
                     </div>
                 </div>
             </div>
-            <br>
+            {{--<br>--}}
             <div class="row user_info_row">
                 <div class="col-md-4 col-md-offset-0 col-xs-12 input_box_user">
                     &nbsp;
@@ -232,7 +240,7 @@
                     </div>
                 </div>
             </div>
-            <br>
+            {{--<br>--}}
             <div class="row user_info_row">
                 <div class="col-md-4 col-md-offset-0 col-xs-12 input_box_user">
                     <div class="form-group">

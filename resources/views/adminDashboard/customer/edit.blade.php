@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <br>
+        <!--<br>-->
 
         <!------second row button & input------->
 
@@ -137,7 +137,7 @@
 
         </div>
 
-        <br>
+        {{--<br>--}}
         <div class="row shop_info_row">
             <div class="col-xs-6">&nbsp;</div>
             <div class="col-md-6 col-md-offset-0 col-xs-12 input_box_shop pull-left address_box">
@@ -175,7 +175,7 @@
                 </div>
             </div>
         </div>
-        <br>
+        {{--<br>--}}
 
         <div class="row user_info_row">
             <div class="col-md-4 col-md-offset-0 col-xs-12 input_box_user">
@@ -195,7 +195,7 @@
                 </div>
             </div>
         </div>
-        <br>
+        {{--<br>--}}
         <div class="row user_info_row">
             <div class="col-md-4 col-md-offset-0 col-xs-12 input_box_user">
                 &nbsp;
@@ -234,7 +234,7 @@
                 </div>
             </div>
         </div>
-        <br>
+        {{--<br>--}}
         <div class="row user_info_row">
             <div class="col-md-4 col-md-offset-0 col-xs-12 input_box_user">
                 <div class="form-group">
