@@ -23,7 +23,7 @@
 @section('content')
 <!--carsul picture-->
 
-<div class="carousel slide"  id="featured">
+<div style="display: none" class="carousel slide"  id="featured">
     <!--button slideShow-->
     <ol class="carousel-indicators">
         <li data-target="#featured" data-slide-to="0" class="active"></li>
@@ -63,7 +63,7 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
 </div>
-
+<br><br><br><br><br>
 <!--button section-->
 <div class="button_box">
     <div class="container button_container">

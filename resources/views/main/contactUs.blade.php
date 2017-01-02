@@ -22,7 +22,7 @@
 
 @section('content')
 
-<div class="carousel slide"  id="featured">
+<div  style="display: none" class="carousel slide"  id="featured">
     <!--button slideShow-->
     <ol class="carousel-indicators">
         <li data-target="#featured" data-slide-to="0" class="active"></li>
@@ -62,9 +62,8 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
 </div>
-
 <!--button section-->
-<div class="button_box">
+<div style="display: none" class="button_box">
     <div class="container button_container">
         <div class="row">
             <div class="col-xs-12">

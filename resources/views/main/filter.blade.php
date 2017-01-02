@@ -23,7 +23,7 @@
 
 @section('content')
 
-    <div class="carousel slide"  id="featured">
+    <div style="display: none" class="carousel slide"  id="featured">
         <!--button slideShow-->
         <ol class="carousel-indicators">
             <li data-target="#featured" data-slide-to="0" class="active"></li>
@@ -65,7 +65,7 @@
     </div>
 
     <!--button section-->
-    <div class="button_box">
+    <div style="display: none" class="button_box">
         <div class="container button_container">
             <div class="row">
                 <div class="col-xs-12">
@@ -95,6 +95,7 @@
         </div>
     </div>
 
+    <br><br><br><br><br>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 dropDown_box">
@@ -166,7 +167,7 @@
 
     <div class="container-fluid">
         <div class="row allShp_boxing top_border">
-            <br><br>
+            <br>
             @foreach($markets as $market)
                 <div class="col-md-3 col-xs-6 pull-right thumbnail padding">
                     <div class="opac_layer">
@@ -176,7 +177,7 @@
                             <img src="https://placehold.it/200x200" class="img-fluid radious_img" alt="Responsive image">
                         @endif
                         <div class="row">
-                            <div class="col-xs-12 ">
+                            <div class="col-xs-10 col-xs-offset-2">
                                 <div class="back_layer">
                                     <h2 class="name_shopping">{{ $market->market_name }}</h2>
                                     <br>
@@ -246,7 +247,7 @@
                                 <img src="https://placehold.it/200x200" class="img-fluid radious_img" alt="Responsive image">
                             @endif
                             <div class="row">
-                                <div class="col-xs-12 ">
+                                <div class="col-xs-10 col-xs-offset-2">
                                     <div class="back_layer">
                                         <h2 class="name_shopping">{{ $market->market_name }}</h2>
                                         <br>

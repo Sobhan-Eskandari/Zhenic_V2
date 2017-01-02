@@ -23,7 +23,7 @@
 
 @section('content')
 
-    <div class="carousel slide"  id="featured">
+    <div class="carousel slide"  id="featured" style="display: none">
         <!--button slideShow-->
         <ol class="carousel-indicators">
             <li data-target="#featured" data-slide-to="0" class="active"></li>
@@ -63,9 +63,8 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>
-
     <!--button section-->
-    <div class="button_box">
+    <div class="button_box" style="display: none;">
         <div class="container button_container">
             <div class="row">
                 <div class="col-xs-12">
@@ -94,6 +93,8 @@
             </div>
         </div>
     </div>
+
+    <br><br><br><br><br>
 
     <div class="container">
         <div class="row">
@@ -166,7 +167,7 @@
 
     <div class="container-fluid">
         <div class="row allShp_boxing top_border">
-            <br><br>
+            <br>
 
             @foreach($markets as $market)
             <div class="col-md-3 col-xs-6 pull-right thumbnail padding">
@@ -177,7 +178,7 @@
                         <img src="https://placehold.it/200x200" class="img-fluid radious_img" alt="Responsive image">
                     @endif
                     <div class="row">
-                        <div class="col-xs-12 ">
+                        <div class="col-xs-10 col-xs-offset-2">
                             <div class="back_layer">
                                 <h2 class="name_shopping">{{ $market->market_name }}</h2>
                                 <br>
@@ -196,6 +197,60 @@
                     </div>
                 </div>
             </div>
+                <div class="col-md-3 col-xs-6 pull-right thumbnail padding">
+                    <div class="opac_layer">
+                        @if(count($market->photos) >= 1)
+                            <img src="marketsPhotos/{{ $market->photos[0]['address'] }}" class="img-fluid radious_img" alt="Responsive image">
+                        @else
+                            <img src="https://placehold.it/200x200" class="img-fluid radious_img" alt="Responsive image">
+                        @endif
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-2">
+                                <div class="back_layer">
+                                    <h2 class="name_shopping">{{ $market->market_name }}</h2>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-xs-6 pull-right">
+                                            <h3 class="detail_title"><a href="{{ route('stores.show', $market->id) }}" class="detail_title">مشاهده جزییات</a></h3>
+                                        </div>
+
+                                        <div class="col-xs-6 pull-left btn_upper">
+                                            <span class="discunt_btn_img"><span class="percent">{{ $market->normal_percentage }}%</span>&nbsp;&nbsp;تخفیف</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 pull-right thumbnail padding">
+                    <div class="opac_layer">
+                        @if(count($market->photos) >= 1)
+                            <img src="marketsPhotos/{{ $market->photos[0]['address'] }}" class="img-fluid radious_img" alt="Responsive image">
+                        @else
+                            <img src="https://placehold.it/200x200" class="img-fluid radious_img" alt="Responsive image">
+                        @endif
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-2">
+                                <div class="back_layer">
+                                    <h2 class="name_shopping">{{ $market->market_name }}</h2>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-xs-6 pull-right">
+                                            <h3 class="detail_title"><a href="{{ route('stores.show', $market->id) }}" class="detail_title">مشاهده جزییات</a></h3>
+                                        </div>
+
+                                        <div class="col-xs-6 pull-left btn_upper">
+                                            <span class="discunt_btn_img"><span class="percent">{{ $market->normal_percentage }}%</span>&nbsp;&nbsp;تخفیف</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             @endforeach
 
         </div>
@@ -231,7 +286,7 @@
             </div>
         </div>
 
-        <br><br><br>
+        <br><br>
         <!--shopping card-->
         <div class="container-fluid space_4_card">
             <div class="row ">
@@ -245,7 +300,7 @@
                             <img src="https://placehold.it/200x200" class="img-fluid radious_img" alt="Responsive image">
                         @endif
                         <div class="row">
-                            <div class="col-xs-12 ">
+                            <div class="col-xs-10 col-xs-offset-2">
                                 <div class="back_layer">
                                     <h2 class="name_shopping">{{ $market->market_name }}</h2>
                                     <br>

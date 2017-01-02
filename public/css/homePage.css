@@ -681,8 +681,8 @@ BestShopping
 }
 .opac_layer img{
     position: relative; 
-    width: 100%;
-    height: 400px;
+    width: 82%;
+    height: 300px;
 
 }
 .name_shopping{
@@ -711,8 +711,8 @@ BestShopping
     padding-left: 15%;
 }
 .back_layer{
-    background-color: white;
-    opacity: 0.8;
+    background-color: #333;
+    opacity: 0.95;
     margin-top: -150px;
     padding-top: 0px;
     padding-bottom: 20px;

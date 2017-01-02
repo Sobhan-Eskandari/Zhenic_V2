@@ -278,7 +278,7 @@
                 <!--first card-->
                 @foreach($specialMarkets as $market)
                     @if($market->market_type == 1)
-                        <div class="col-md-3 col-xs-6 thumbnail padding">
+                        <div class="col-md-3 col-xs-6 pull-right thumbnail padding">
                             <div class="opac_layer">
                                 @if(count($market->photos) >= 1)
                                     <img src="marketsPhotos/{{ $market->photos[0]['address'] }}" class="img-fluid radious_img" alt="Responsive image">
@@ -286,7 +286,7 @@
                                     <img src="https://placehold.it/200x200" class="img-fluid radious_img" alt="Responsive image">
                                 @endif
                                 <div class="row">
-                                    <div class="col-xs-12 ">
+                                    <div class="col-xs-10 col-xs-offset-2 ">
                                         <div class="back_layer">
                                             <h2 class="name_shopping">{{ $market->market_name }}</h2>
                                             <br>
