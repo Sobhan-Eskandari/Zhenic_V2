@@ -167,7 +167,7 @@
                         });
 
                         $( "#filterBtn" ).click(function() {
-                            if (activated === "false"){
+                            if (activated === "false" || activated === "null"){
                                 $("#filterBtn").css("background-color","#85C734");
                                 activated = "true";
                                 localStorage.setItem("activated", activated);
