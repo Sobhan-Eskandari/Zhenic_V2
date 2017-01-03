@@ -205,7 +205,7 @@
 <div class="container-fluid back_copy">
     <div class="row">
         <div class="col-xs-12">
-            <p class="footer_moreInfo">تمامی حقوق این وبسایت متعلق به تیم توسعه حرف نگار می باشد</p>
+            <p class="footer_moreInfo">تمامی حقوق این وبسایت متعلق به تیم توسعه حروف نگار می باشد</p>
 
             <P class="footer_moreInfo_cp">COPYRIGHT2016</P>
         </div>
