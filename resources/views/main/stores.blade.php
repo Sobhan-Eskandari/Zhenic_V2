@@ -160,7 +160,6 @@
 
                         $( document ).ready(function() {
                             activated = localStorage.getItem("activated");
-                            alert(activated);
                             if (activated === "true"){
                                 activated = "false";
                                 localStorage.setItem("activated", activated);
@@ -168,9 +167,7 @@
                         });
 
                         $( "#filterBtn" ).click(function() {
-                            alert(activated);
                             if (activated === "false"){
-                                alert("green");
                                 $("#filterBtn").css("background-color","#85C734");
                                 activated = "true";
                                 localStorage.setItem("activated", activated);

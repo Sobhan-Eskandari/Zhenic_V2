@@ -166,21 +166,18 @@
                         $( document ).ready(function() {
                             activated = localStorage.getItem("activated");
 
-                            alert(activated);
 
                             if (activated == "true"){
-                                alert("white");
                                 $("#filterBtn").css("background-color","#85C734");
                                 // $(this).setAttribute('style', 'background-color:#f5f5f5 !important');
                             }else{
-                                alert("green");
                                 $("#filterBtn").css("background-color","#f5f5f5");
                                 //$(this).setAttribute('style', 'background-color:#85C734 !important');
                             }
                         });
 
                         $( "#filterBtn" ).click(function() {
-                            alert(activated);
+
                             if (activated === "false"){
                                 $("#filterBtn").css("background-color","#85C734");
                                 activated = "true";
