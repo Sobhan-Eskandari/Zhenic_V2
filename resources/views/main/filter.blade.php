@@ -124,7 +124,7 @@
                             {!! Form::label('city', 'شهرستان', ['class'=>'button_name']) !!}
                         </div>
                         <div class="row dropdown">
-                            {!! Form::select('city', ['0' => $_POST['city']], 0, ['class'=>'btn dropdown-toggle btn_all']) !!}
+                            {!! Form::select('city', [$_POST['city'] => $_POST['city']], $_POST['city'], ['class'=>'btn dropdown-toggle btn_all']) !!}
 
                         </div>
                     </div>
@@ -151,7 +151,7 @@
 
                     <div class="col-md-3 col-md-offset-1 col-xs-4 col-xs-offset-8">
                         <label class="switch">
-                            @if ($_POST['special'] == '0')
+                            @if (!isset($_POST['special']))
                                 {!! Form::checkbox('special') !!}
                             @else
                                 {!! Form::checkbox('special', 'value', true) !!}
