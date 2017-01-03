@@ -160,16 +160,35 @@
                         </label>
                     </div>
 
-
                     <script>
                         var activated = false;
-                        $( "#filterBtn" ).click(function() {
-                            if (activated == false){
-                                activated = true;
-                                $(this).css("background-color","#85C734");
+
+                        $( document ).ready(function() {
+                            activated = localStorage.getItem("activated");
+
+                            alert(activated);
+
+                            if (activated == "true"){
+                                alert("white");
+                                $("#filterBtn").css("background-color","#85C734");
+                                // $(this).setAttribute('style', 'background-color:#f5f5f5 !important');
                             }else{
-                                activated = false;
-                                $(this).css("background-color","#f5f5f5");
+                                alert("green");
+                                $("#filterBtn").css("background-color","#f5f5f5");
+                                //$(this).setAttribute('style', 'background-color:#85C734 !important');
+                            }
+                        });
+
+                        $( "#filterBtn" ).click(function() {
+                            alert(activated);
+                            if (activated === "false"){
+                                $("#filterBtn").css("background-color","#85C734");
+                                activated = "true";
+                                localStorage.setItem("activated", activated);
+                            }else{
+                                activated = "false";
+                                $("#filterBtn").css("background-color","#f5f5f5");
+                                localStorage.setItem("activated", activated);
                             }
                         });
                     </script>
@@ -304,6 +323,8 @@
 
         <br><br><br>
     </div>
+
+
 
 @endsection
 
