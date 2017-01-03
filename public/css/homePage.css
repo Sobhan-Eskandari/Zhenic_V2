@@ -1170,7 +1170,7 @@ button footer
 .contact_sub{
     font-size: 17px;
     text-align: center;
-    padding-top: 2%;
+    padding-top: 1%;
     color: white;
 }
 @media(max-width: 1000px){
