@@ -106,7 +106,7 @@
                             {!! Form::label('market_type', 'نوع فروشگاه', ['class'=>'button_name']) !!}
                         </div>
                         <div class="row dropdown">
-                            {!! Form::select('market_type', ['0' => 'همه'] + $market_type, 0,['class'=>'btn dropdown-toggle btn_all']) !!}
+                            {!! Form::select('market_type', ['0' => 'همه'] + $market_type, $_POST['market_type'],['class'=>'btn dropdown-toggle btn_all']) !!}
                         </div>
                     </div>
 
@@ -115,7 +115,7 @@
                             {!! Form::label('percentage', 'درصد تخفیف', ['class'=>'button_name']) !!}
                         </div>
                         <div class="row dropdown">
-                            {!! Form::select('percentage', ['0' => 'همه', '1' =>'0 تا 20 درصد', '2' => '20 تا 40 درصد', '3' => '40 تا 60 درصد', '4' => '60 تا 80 درصد', '5' => '80 تا 100 درصد'], 0,['class'=>'btn dropdown-toggle btn_all']) !!}
+                            {!! Form::select('percentage', ['0' => 'همه', '1' =>'0 تا 20 درصد', '2' => '20 تا 40 درصد', '3' => '40 تا 60 درصد', '4' => '60 تا 80 درصد', '5' => '80 تا 100 درصد'], $_POST['percentage'],['class'=>'btn dropdown-toggle btn_all']) !!}
                         </div>
                     </div>
 
@@ -124,7 +124,8 @@
                             {!! Form::label('city', 'شهرستان', ['class'=>'button_name']) !!}
                         </div>
                         <div class="row dropdown">
-                            {!! Form::select('city', ['0' =>'استان خود را انتخاب کنید...'], 0,['class'=>'btn dropdown-toggle btn_all']) !!}
+                            {!! Form::select('city', ['0' => $_POST['city']], 0, ['class'=>'btn dropdown-toggle btn_all']) !!}
+
                         </div>
                     </div>
 
@@ -133,7 +134,7 @@
                             {!! Form::label('state', 'استان', ['class'=>'button_name']) !!}
                         </div>
                         <div class="row">
-                            {!! Form::select('state', $states, 0,['class'=>'btn dropdown-toggle btn_all']) !!}
+                            {!! Form::select('state', $states, $_POST['state'], ['class'=>'btn dropdown-toggle btn_all']) !!}
                         </div>
                     </div>
                 </div>
@@ -150,7 +151,11 @@
 
                     <div class="col-md-3 col-md-offset-1 col-xs-4 col-xs-offset-8">
                         <label class="switch">
-                            {!! Form::checkbox('special') !!}
+                            @if ($_POST['special'] == '0')
+                                {!! Form::checkbox('special') !!}
+                            @else
+                                {!! Form::checkbox('special', 'value', true) !!}
+                            @endif
                             <div class="slider round"></div>
                         </label>
                     </div>
