@@ -177,7 +177,7 @@
                             <img src="https://placehold.it/200x200" class="img-fluid radious_img" alt="Responsive image">
                         @endif
                         <div class="row">
-                            <div class="col-xs-12 ">
+                            <div class="col-xs-10 col-xs-offset-2">
                                 <div class="back_layer">
                                     <h2 class="name_shopping">{{ $market->market_name }}</h2>
                                     <br>
