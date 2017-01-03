@@ -57,11 +57,11 @@
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: red;
+    background-color: whitesmoke;
+    border: 1px solid grey;
     -webkit-transition: .4s;
     transition: .4s;
 }
-
 input:checked + .slider {
     background-color: white;
 }

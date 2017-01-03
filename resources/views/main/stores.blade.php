@@ -151,9 +151,22 @@
                     <div class="col-md-3 col-md-offset-1 col-xs-4 col-xs-offset-8">
                         <label class="switch">
                             {!! Form::checkbox('special') !!}
-                            <div class="slider round"></div>
+                            <div id="filterBtn" class="slider round"></div>
                         </label>
                     </div>
+
+                    <script>
+                        var activated = false;
+                        $( "#filterBtn" ).click(function() {
+                            if (activated == false){
+                                activated = true;
+                                $(this).css("background-color","#85C734");
+                            }else{
+                                activated = false;
+                                $(this).css("background-color","#f5f5f5");
+                            }
+                        });
+                    </script>
 
                 </div>
                 {!! Form::close() !!}
@@ -166,7 +179,7 @@
     <!----------------allShops first row---------------->
 
     <div class="container-fluid">
-        <div class="row allShp_boxing top_border">
+        <div class="row allShp_boxing top_border border_bottom">
             <br>
 
             @foreach($markets as $market)
