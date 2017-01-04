@@ -124,7 +124,7 @@
                             {!! Form::label('city', 'شهرستان', ['class'=>'button_name']) !!}
                         </div>
                         <div class="row dropdown">
-                            {!! Form::select('city', ['0' =>'استان خود را انتخاب کنید...'], 0,['class'=>'btn dropdown-toggle btn_all']) !!}
+                            {!! Form::select('city', ['استان خود را انتخاب کنید...' =>'استان خود را انتخاب کنید...'], 'استان خود را انتخاب کنید...',['class'=>'btn dropdown-toggle btn_all']) !!}
                         </div>
                     </div>
 

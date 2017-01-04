@@ -286,36 +286,36 @@ class UserController extends Controller
     }
     
 	public function NewAppLogin(Request $request){
-	        $input = $request->all();
-		    if (Auth::attempt(['email' => $input['email'], 'password' => $input['password']])) {
-	            $user = User::whereEmail($input['email'])
-	                ->get([
-	                    'id',
-	                    'first_name',
-	                    'last_name',
-	                    'social_security_number',
-	                    'state',
-	                    'city',
-	                    'cell_1',
-	                    'email',
-	                    'zhenic_card_number',
-	                    'role',
-	                ]);
-	            return Response::json(array(
-	                'error' => false,
-	                'approve' => true,
-	                'user' => $user,
-	                'status_code' => 200
-	            ));
-	
-	        } else {
-	            return Response::json(array(
-	                'error' => false,
-	                'approve' => false,
-	                'status_code' => 200
-	            ));
-	        }
-	    }
+        $input = $request->all();
+        if (Auth::attempt(['email' => $input['email'], 'password' => $input['password']])) {
+            $user = User::whereEmail($input['email'])
+                ->get([
+                    'id',
+                    'first_name',
+                    'last_name',
+                    'social_security_number',
+                    'state',
+                    'city',
+                    'cell_1',
+                    'email',
+                    'zhenic_card_number',
+                    'role',
+                ]);
+            $user[0]->markets;
+            return Response::json(array(
+                'error' => false,
+                'approve' => true,
+                'user' => $user,
+                'status_code' => 200
+            ));
+        } else {
+            return Response::json(array(
+                'error' => false,
+                'approve' => false,
+                'status_code' => 200
+            ));
+        }
+    }
 
     public function finduser(Request $request){
         $keys = $request->name;
