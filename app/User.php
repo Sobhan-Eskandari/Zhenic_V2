@@ -65,8 +65,11 @@ class User extends Authenticatable
         return $this->morphToMany('App\Category','categorable');
     }
 
-
     public function regTypes(){
         return $this->morphToMany('App\RegType','reg_typeable');
+    }
+
+    public function markets(){
+        return $this->hasMany('App\Market');
     }
 }

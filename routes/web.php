@@ -10,6 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+use App\News;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 use App\Admin;
@@ -264,6 +265,10 @@ Route::get('/json-market/{id?}', function($id = null) {
                 $photos[] = "http://khanefile.ir/marketsPhotos/" . $photo->address;
             }
             $markets[$i]['photos_address'] = $photos;
+            $photos = [];
+        }
+        foreach ($markets as $market){
+            $market['text'] = strip_tags($market['text']);
         }
     } else {
         $markets = Market::findOrFail($id, [
@@ -286,13 +291,30 @@ Route::get('/json-market/{id?}', function($id = null) {
             $photos[] = "http://khanefile.ir/marketsPhotos/" . $photo->address;
         }
         $markets['photos_address'] = $photos;
-    }
-    foreach ($markets as $market){
-        $market['text'] = strip_tags($market['text']);
+        $markets['text'] = strip_tags($markets['text']);
     }
     $response =  Response::json(array(
         'error' => false,
         'markets' => $markets,
+        'status_code' => 200
+    ));
+
+    return $response;
+});
+
+Route::get('/json-news/{id?}', function($id = null) {
+    if ($id == null) {
+        $news = News::get();
+        foreach ($news as $new){
+            $new['body'] = strip_tags($new['body']);
+        }
+    } else {
+        $news = News::findOrFail($id);
+        $news['body'] = strip_tags($news['body']);
+    }
+    $response =  Response::json(array(
+        'error' => false,
+        'news' => $news,
         'status_code' => 200
     ));
 
