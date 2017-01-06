@@ -264,6 +264,11 @@ Route::get('/json-market/{id?}', function($id = null) {
             foreach ($markets[$i]->photos as $photo){
                 $photos[] = "http://khanefile.ir/marketsPhotos/" . $photo->address;
             }
+            if(count($photos) < 3){
+                for($j = count($photos); $j < 3; $j++){
+                    $photos[$j] = '';
+                }
+            }
             $markets[$i]['photos_address'] = $photos;
             $photos = [];
         }
@@ -289,6 +294,11 @@ Route::get('/json-market/{id?}', function($id = null) {
         ]);
         foreach ($markets->photos as $photo){
             $photos[] = "http://khanefile.ir/marketsPhotos/" . $photo->address;
+        }
+        if(count($photos) < 3){
+            for($j = count($photos); $j < 3; $j++){
+                $photos[$j] = '';
+            }
         }
         $markets['photos_address'] = $photos;
         $markets['text'] = strip_tags($markets['text']);
